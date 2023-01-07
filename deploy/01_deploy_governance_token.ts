@@ -21,7 +21,7 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     ? 1
     : VERIFICATION_BLOCK_CONFIRMATIONS;
 
-  log("------------- Deployment is starting -------------", deployer);
+  log("------------- Deploying Governance Token -------------", deployer);
   const deployResult = await deploy("GovernanceToken", {
     from: deployer,
     args: [GOVERNANCE_TOKEN_MAX_SUPPLY],
