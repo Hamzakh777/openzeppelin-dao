@@ -5,11 +5,26 @@ import "hardhat-deploy";
 import "@typechain/hardhat";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.17",
+  solidity: {
+    version: "0.8.9",
+    settings: {
+      optimizer: {
+        enabled: true,
+      },
+    },
+  },
   namedAccounts: {
     deployer: {
       default: 0,
       1: 0,
+    },
+  },
+  networks: {
+    hardhat: {
+      allowUnlimitedContractSize: true,
+    },
+    localhost: {
+      allowUnlimitedContractSize: true,
     },
   },
 };
