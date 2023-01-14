@@ -31,7 +31,7 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     const boxContract = await ethers.getContractAt("Box", box.address)
     const timeLock = await ethers.getContract("TimeLock")
     const transferTx = await boxContract.transferOwnership(timeLock.address)
-    await transferTx.wait(1)
+    await transferTx.wait(waitConfirmations)
 
 };
 
