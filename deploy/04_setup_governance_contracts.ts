@@ -4,11 +4,7 @@ import { DeployFunction } from "hardhat-deploy/dist/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import {
   DEVELOPMENT_CHAINS,
-  MIN_DELAY,
-  QUORUM_PERCENTAGE,
   VERIFICATION_BLOCK_CONFIRMATIONS,
-  VOTING_DELAY,
-  VOTING_PERIOD,
 } from "../hardhat.consts";
 import { GovernanceToken, Governor, TimeLock } from "../typechain-types";
 
